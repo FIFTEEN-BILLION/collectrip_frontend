@@ -476,7 +476,8 @@ const MapPage = () => {
 
   const fetchSearch = async (value: string) => {
     // const baseUrl = 'https://openapi.naver.com';
-    const baseUrl = '/api/naver';
+    // const baseUrl = '/api/naver';
+    const baseUrl = '/proxy';
 
     const response = await fetch(`${baseUrl}/v1/search/local.json?query=${value}&display=20&start=1&sort=random`, {
       method: 'GET',
