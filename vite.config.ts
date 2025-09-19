@@ -5,15 +5,15 @@ import { vanillaExtractPlugin } from '@vanilla-extract/vite-plugin';
 
 export default defineConfig({
   plugins: [react(), svgr(), vanillaExtractPlugin()],
-  server: {
-    proxy: {
-      '/api/naver': {
-        target: 'https://openapi.naver.com',
-        changeOrigin: true,
-        rewrite: (path) => path.replace(/^\/api\/naver/, ''),
-      },
-    },
-  },
+  // server: {
+  //   proxy: {
+  //     '/api/naver': {
+  //       target: 'https://openapi.naver.com',
+  //       changeOrigin: true,
+  //       rewrite: (path) => path.replace(/^\/api\/naver/, ''),
+  //     },
+  //   },
+  // },
   resolve: {
     alias: [
       { find: '@ts', replacement: '/src/ts' },
