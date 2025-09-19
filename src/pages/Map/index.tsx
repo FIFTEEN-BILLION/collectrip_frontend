@@ -475,10 +475,11 @@ const MapPage = () => {
   >(null);
 
   const fetchSearch = async (value: string) => {
-    const baseUrl = 'https://openapi.naver.com';
-    // const baseUrl = '/api/naver';
+    // const baseUrl = 'https://openapi.naver.com';
+    const baseUrl = '/api/naver';
 
     const response = await fetch(`${baseUrl}/v1/search/local.json?query=${value}&display=20&start=1&sort=random`, {
+      method: 'GET',
       headers: {
         'X-Naver-Client-Id': import.meta.env.VITE_APP_NAVER_CLIENT_ID,
         'X-Naver-Client-Secret': import.meta.env.VITE_APP_NAVER_CLIENT_SECRET,
